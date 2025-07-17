@@ -10,3 +10,5 @@ scripts:
     script: ./gradlew assembleRelease
   - name: 확인용 APK 경로 출력
     script: find . -name "*.apk"
+artifacts:
+  - app/build/outputs/**/*.apk
