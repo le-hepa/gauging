@@ -10,4 +10,4 @@ workflows:
       - name: Build release APK
         script: ./gradlew assembleRelease
     artifacts:
-      - app/build/outputs/**/*.apk
+      - app/build/outputs/gauging/gauging.apk
