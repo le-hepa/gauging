@@ -11,4 +11,4 @@ workflows:
       - name: Show generated APK path
         script: find . -name "*.apk"
     artifacts:
-      - build/app/outputs/**/*.apk
+      - build/outputs/**/*.apk
