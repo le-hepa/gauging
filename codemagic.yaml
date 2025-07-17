@@ -1,0 +1,12 @@
+workflows:
+  android-release:
+    name: Gauging App Build
+    environment:
+      java: 17
+    scripts:
+      - name: Grant gradlew permission
+        script: chmod +x ./gradlew
+      - name: Build release APK
+        script: ./gradlew assembleRelease
+    artifacts:
+      - app/build/outputs/**/*.apk
