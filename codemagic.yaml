@@ -2,7 +2,8 @@ workflows:
   android-release:
     name: Gauging App Build
     environment:
-      java: 17
+      vars:
+        JAVA_VERSION: 17
     scripts:
       - name: Grant gradlew permission
         script: chmod +x ./gradlew
