@@ -3,12 +3,12 @@ workflows:
     name: Gauging App Build
     environment:
       java: 17
-scripts:
-  - name: Grant gradlew permission
-    script: chmod +x ./gradlew
-  - name: Build release APK
-    script: ./gradlew assembleRelease
-  - name: 확인용 APK 경로 출력
-    script: find . -name "*.apk"
-artifacts:
-  - app/build/outputs/**/*.apk
+    scripts:
+      - name: Grant gradlew permission
+        script: chmod +x ./gradlew
+      - name: Build release APK
+        script: ./gradlew assembleRelease
+      - name: Show generated APK path
+        script: find . -name "*.apk"
+    artifacts:
+      - app/build/outputs/**/*.apk
